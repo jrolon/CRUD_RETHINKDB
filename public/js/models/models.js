@@ -1,4 +1,8 @@
+
+
 window.Wine = Backbone.Model.extend({
+
+    
 
     urlRoot: "/wines",
 
@@ -11,11 +15,15 @@ window.Wine = Backbone.Model.extend({
             return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a name"};
         };
 
-        this.validators.grapes = function (value) {
+        this.validators.email = function (value) {
             return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a grape variety"};
         };
 
-        this.validators.country = function (value) {
+        this.validators.users_password = function (value) {
+            return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a grape variety"};
+        };
+
+        this.validators.emailtrue = function (value) {
             return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a country"};
         };
     },
@@ -41,15 +49,24 @@ window.Wine = Backbone.Model.extend({
         return _.size(messages) > 0 ? {isValid: false, messages: messages} : {isValid: true};
     },
 
+    
+    
     defaults: {
         id: null,
         name: "",
-        grapes: "",
-        country: "USA",
-        region: "California",
+        email: "",
+        emailtrue: "",
+        telefono: "",
         year: "",
         description: "",
-        picture: null
+        picture: null,
+        createdAt: Date.now(),
+        lastLoggedInAt: Date.now(),
+        forwards: [],
+        group: "JK9x4kOSTKqb3XEHuP71ZA==",
+        ip: "::ffff:127.0.0.1",
+        settings: {},
+        users_password: "",
     }
 });
 

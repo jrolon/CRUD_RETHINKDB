@@ -4,7 +4,7 @@
 
         <fieldset>
 
-            <legend>Wine Details</legend>
+            <legend>Detalles del Usuario</legend>
             <br/>
 
             <div class="row">
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="control-group">
-                        <label for="name" class="control-label">Name:</label>
+                        <label for="name" class="control-label">Usuario:</label>
 
                         <div class="controls">
                             <input type="text" id="name" name="name" value="<%= name %>"/>
@@ -29,32 +29,43 @@
                     </div>
 
                     <div class="control-group">
-                        <label for="grapes" class="control-label">Grapes:</label>
+                        <label for="email" class="control-label">Contraseña:</label>
 
                         <div class="controls">
-                            <input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
+                            <input type="password" id="email" name="email" value="<%= email %>"/>
                             <span class="help-inline"></span>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label for="country" class="control-label">Country:</label>
+                            <label for="users_password" class="control-label">Confirme Contraseña:</label>
+    
+                            <div class="controls">
+                                <input type="password" id="users_password" name="users_password" value="<%= users_password %>"/>
+                                <span class="help-inline"></span>
+                            </div>
+                        </div>
+
+
+
+                    <div class="control-group">
+                        <label for="emailtrue" class="control-label">Correo Electronico:</label>
 
                         <div class="controls">
-                            <input type="text" id="country" name="country" value="<%= country %>"/>
+                            <input type="text" id="emailtrue" name="emailtrue" value="<%= emailtrue %>"/>
                             <span class="help-inline"></span>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label for="region" class="control-label">Region:</label>
+                        <label for="telefono" class="control-label">Teléfono:</label>
 
                         <div class="controls">
-                            <input type="text" id="region" name="region" value="<%= region %>"/>
+                            <input type="text" id="telefono" name="telefono" value="<%= telefono %>"/>
                         </div>
                     </div>
 
-                    <div class="control-group">
+                    <!--<div class="control-group">
                         <label for="year" class="control-label">Year:</label>
 
                         <div class="controls">
@@ -73,23 +84,23 @@
                                 <%= year == 2007?'selected':'' %>>2007</option>
                             </select>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="control-group">
+                    <!--<div class="control-group">
                         <label for="description" class="control-label">Notes:</label>
 
                         <div class="controls">
                             <textarea id="description" name="description" style="width: 90%;" rows="6"><%= description
                                 %></textarea>
                         </div>
-                    </div>
+                    </div>-->
 
                 </div>
 
                 <div class="span4">
                     <div class="well" style="width: 180px;text-align: center;width:50%;margin: 0px auto;">
-                        <p><img id="picture" width="180" src="<%= picture === null ? 'pics/generic.jpg' : 'pics/' + picture %>"/></p>
-                        <p style="color:#999;">To change the picture, drag a new picture from your file system onto the box above.</p>
+                        <p><img id="picture" width="180" src="<%= picture === null ? 'pics/wine.jpg' : 'pics/' + picture %>"/></p>
+                        <p style="color:#999;"><To change the picture, drag a new picture from your file system onto the box above.</p>
                     </div>
                 </div>
 
@@ -98,8 +109,8 @@
         </fieldset>
 
         <div class="form-actions">
-            <a href="#" class="btn btn-primary save">Save</a>
-            <a href="#" class="btn delete">Delete</a>
+            <a href="#" class="btn btn-primary save">Salvar</a>
+            <a href="#" class="btn delete">Eliminar</a>
         </div>
 
     </form>
@@ -109,7 +120,7 @@
 <div class="row-fluid status-bar">
     <div class="span12">
         <div class="alert alert-success" style="display: none">
-            <b>Success!</b> Wine saved successfully
+            <b>Success!</b> Usuario guardado con exito
         </div>
     </div>
 </div>

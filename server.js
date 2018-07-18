@@ -15,17 +15,17 @@ app.configure(function () {
 });
 
 app.get('/wines', wine.findAll);
-app.get('/wines/:id', wine.findById);
+app.get('/wines/:email', wine.findById);
 app.post('/wines', wine.addWine);
-app.put('/wines/:id', wine.updateWine);
-app.delete('/wines/:id', wine.deleteWine);
+app.put('/wines/:email', wine.updateWine);
+app.delete('/wines/:email', wine.deleteWine);
 
 // #### RethinkDB connection details
 
 var dbConfig = {
   host : process.env.RDB_HOST || 'localhost',
   port : parseInt(process.env.RDB_PORT) || 28015,
-  db   : process.env.RDB_DB || 'winecellar',
+  db   : process.env.RDB_DB || 'Prueba',
 };  
 
 // Using a single db connection for the app

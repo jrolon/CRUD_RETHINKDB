@@ -52,11 +52,11 @@ window.WineView = Backbone.View.extend({
         this.model.save(null, {
             success: function (model) {
                 self.render();
-                app.navigate('wines/' + model.id, false);
-                utils.showAlert('Success!', 'Wine saved successfully', 'alert-success');
+                app.navigate('wines/' + model.email, false);
+                utils.showAlert('Success!', 'Usuario guardado con exito', 'alert-success');
             },
             error: function () {
-                utils.showAlert('Error', 'An error occurred while trying to delete this item', 'alert-error');
+                utils.showAlert('Error', 'Se produjo un error al intentar eliminar este elemento', 'alert-error');
             }
         });
     },
@@ -64,7 +64,7 @@ window.WineView = Backbone.View.extend({
     deleteWine: function () {
         this.model.destroy({
             success: function () {
-                alert('Wine deleted successfully');
+                alert('Usuario eliminado con exito');
                 window.history.back();
             }
         });
@@ -76,12 +76,12 @@ window.WineView = Backbone.View.extend({
         event.preventDefault();
         var e = event.originalEvent;
         e.dataTransfer.dropEffect = 'copy';
-        this.pictureFile = e.dataTransfer.files[0];
+         this.pictureFile = e.dataTransfer.files[0];
 
         // Read the image file from the local file system and display it in the img tag
         var reader = new FileReader();
         reader.onloadend = function () {
-            $('#picture').attr('src', reader.result);
+           $('#picture').attr('src', reader.result);
         };
         reader.readAsDataURL(this.pictureFile);
     }
