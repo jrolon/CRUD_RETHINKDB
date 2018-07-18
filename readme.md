@@ -1,9 +1,9 @@
 # Usuarios Granja Móvil Sample Application with Backbone.js, Twitter Bootstrap, Node.js, Express, and RethinkDB #
 
-This is a fork of Christophe Coenraets's [Usuarios Granja Móvil](https://github.com/ccoenraets/nodecellar) 
+This is a fork of jrolon [Usuarios Granja Móvil](https://github.com/ccoenraets/nodecellar) 
 sample CRUD application built with Backbone.js, Twitter Bootstrap, Node.js, Express, modified to use RethinkDB.
 
-The application allows you to browse through a list of wines, as well as add, update, and delete wines.
+The application allows you to browse through a list of users, as well as add, update, and delete users.
 
 # Complete stack #
 

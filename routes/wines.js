@@ -1,4 +1,4 @@
-// A fork of the Christophe Coenraets's [Usuarios Granja Móvil](https://github.com/ccoenraets/nodecellar)
+// A fork of the jrolon [Usuarios Granja Móvil](https://github.com/ccoenraets/nodecellar)
 // sample app using Backbone.js, Twitter Bootstrap, Node.js, Express, and RethinkDB.
 //
 // See the [GitHub README](https://github.com/rethinkdb/nodecellar-rethinkdb/blob/master/readme.md)
